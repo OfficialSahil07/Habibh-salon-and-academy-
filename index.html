@@ -46,67 +46,51 @@
         .hero-h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.5rem, 8vw, 5.5rem); line-height: 1.1; margin-bottom: 2rem; font-weight: 300; }
         .hero-h1 em { color: var(--gold); font-style: italic; }
 
-        /* --- SIGNATURE SERVICES WITH PHOTOS --- */
+        /* --- SIGNATURE SERVICES --- */
         #services { background-image: url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1600&q=80'); }
         .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 4rem; }
         .service-card { 
-            position: relative; 
-            aspect-ratio: 4/5; 
-            overflow: hidden; 
-            border: 1px solid var(--border);
-            cursor: pointer;
+            position: relative; aspect-ratio: 4/5; overflow: hidden; 
+            border: 1px solid var(--border); cursor: pointer; background: var(--bg-alt);
         }
-        .service-card img { 
-            width: 100%; height: 100%; object-fit: cover; 
-            transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
-            filter: brightness(0.7) contrast(1.1);
-        }
-        .service-card:hover img { transform: scale(1.1); filter: brightness(0.9); }
-        .service-txt-overlay { 
-            position: absolute; bottom: 0; left: 0; right: 0; 
-            padding: 2rem; background: linear-gradient(transparent, rgba(0,0,0,0.9)); 
-            text-align: left;
-        }
+        .service-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; filter: brightness(0.6); }
+        .service-card:hover img { transform: scale(1.1); filter: brightness(0.8); }
+        .service-txt-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(transparent, rgba(0,0,0,0.9)); text-align: left; }
         .service-txt-overlay h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--gold-lt); font-weight: 300; }
-        .service-txt-overlay p { font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; color: #FFF; opacity: 0.8; margin-top: 5px; }
+        .service-txt-overlay p { font-size: 0.8rem; text-transform: uppercase; color: #FFF; opacity: 0.7; margin-top: 5px; }
 
         /* --- LOCATION --- */
         #location { display: grid; grid-template-columns: 1.2fr 0.8fr; background: var(--bg-main); border-top: 1px solid var(--border); }
-        .map-container iframe { width: 100%; height: 500px; border: 0; }
+        .map-container iframe { width: 100%; height: 550px; border: 0; }
         .loc-text { padding: 6rem; display: flex; flex-direction: column; justify-content: center; }
 
         /* --- CONTACT --- */
         #contact { background-image: url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1600&q=80'); text-align: center; }
         #contact .section-h2 { font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 300; color: #FFF; }
         #contact .section-h2 em { color: var(--gold); font-style: italic; }
-        
         .contact-form { display: grid; gap: 1.5rem; margin-top: 3rem; max-width: 850px; margin-inline: auto; text-align: left; }
-        .field label { font-size: .65rem; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); margin-bottom: 0.5rem; display: block; }
-        .field input, .field select, .field textarea { background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: white; padding: 1.2rem; width: 100%; outline: none; }
-        
+        .field label { font-size: .65rem; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); margin-bottom: 0.5rem; display: block; font-weight: 600; }
+        .field input, .field select, .field textarea { background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border); color: white; padding: 1.2rem; width: 100%; outline: none; }
         .field select option { background-color: #161310; color: #E6E2DF; }
         .form-submit { background: var(--gold); color: white; border: none; padding: 1.4rem; cursor: pointer; text-transform: uppercase; font-weight: bold; width: 100%; margin-top: 1rem; transition: 0.3s; }
-        .form-submit:hover { background: #FFF; color: #000; }
 
-        /* --- STYLED FOOTER --- */
+        /* --- SINGLE LINE FOOTER --- */
         footer { padding: 2.5rem 4rem; background: #0D0B09; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(255, 255, 255, 0.05); }
-        .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 300; color: #FFF; text-decoration: none; letter-spacing: 1px; }
-        .footer-logo span { color: var(--gold); font-style: italic; font-weight: 400; }
+        .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; text-decoration: none; color: #FFF; }
+        .footer-logo span { color: var(--gold); font-style: italic; }
         .footer-copy { font-size: 0.7rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px; }
         .footer-socials { display: flex; gap: 1.8rem; }
         .footer-socials a { color: rgba(255,255,255,0.6); font-size: 1.2rem; transition: 0.3s; }
-        .footer-socials a:hover { color: var(--gold); transform: translateY(-2px); }
 
         .float-wa { position: fixed; bottom: 35px; right: 35px; background: var(--whatsapp-green); color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; z-index: 100; text-decoration: none; box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
 
-        .reveal { opacity: 0; transform: translateY(30px); transition: 1.2s cubic-bezier(0.22, 1, 0.36, 1); }
+        .reveal { opacity: 0; transform: translateY(30px); transition: 1.2s ease; }
         .reveal.visible { opacity: 1; transform: none; }
 
         @media (max-width: 900px) {
             nav { padding: 1.2rem 2rem; } .nav-links { display: none; }
             section, .atm-section { padding: 6rem 1.5rem; }
-            #location, .form-row { grid-template-columns: 1fr; }
-            .services-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            #location, .form-row, .services-grid { grid-template-columns: 1fr; }
             footer { flex-direction: column; gap: 1.5rem; text-align: center; }
         }
     </style>
@@ -135,65 +119,28 @@
 
 <section id="services" class="atm-section">
     <div class="atm-overlay"></div>
-    <div class="reveal" style="text-align: center; margin-bottom: 3rem;">
-        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 3.8rem; font-weight: 300;">Signature Selection</h2>
-        <p style="color: var(--gold); letter-spacing: 3px; font-size: 0.8rem; text-transform: uppercase;">Excellence in Every Detail</p>
+    <div class="reveal" style="text-align: center; margin-bottom: 4rem;">
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300;">Signature Services</h2>
     </div>
     <div class="services-grid">
-        <div class="service-card reveal">
-            <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800&q=80" alt="Haircut">
-            <div class="service-txt-overlay">
-                <h3>Master Haircut</h3>
-                <p>Precision Styling</p>
-            </div>
-        </div>
-        <div class="service-card reveal">
-            <img src="https://images.unsplash.com/photo-1554519515-242161756769?w=800&q=80" alt="Coloring">
-            <div class="service-txt-overlay">
-                <h3>Artistic Color</h3>
-                <p>International Palette</p>
-            </div>
-        </div>
-        <div class="service-card reveal">
-            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=800&q=80" alt="Academy">
-            <div class="service-txt-overlay">
-                <h3>Professional Academy</h3>
-                <p>Expert Training</p>
-            </div>
-        </div>
-        <div class="service-card reveal">
-            <img src="https://images.unsplash.com/photo-1522337094846-8a818192de1f?w=800&q=80" alt="Keratin">
-            <div class="service-txt-overlay">
-                <h3>Keratin Therapy</h3>
-                <p>Silky Smooth Finish</p>
-            </div>
-        </div>
-        <div class="service-card reveal">
-            <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=800&q=80" alt="Skin Care">
-            <div class="service-txt-overlay">
-                <h3>Clinical Skin Care</h3>
-                <p>Advanced Glow</p>
-            </div>
-        </div>
-        <div class="service-card reveal">
-            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80" alt="Bridal">
-            <div class="service-txt-overlay">
-                <h3>Bridal Artistry</h3>
-                <p>Timeless Beauty</p>
-            </div>
-        </div>
+        <div class="service-card reveal"><img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800"><div class="service-txt-overlay"><h3>Master Haircut</h3><p>Precision Styling</p></div></div>
+        <div class="service-card reveal"><img src="https://images.unsplash.com/photo-1554519515-242161756769?w=800"><div class="service-txt-overlay"><h3>Artistic Color</h3><p>International Palette</p></div></div>
+        <div class="service-card reveal"><img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=800"><div class="service-txt-overlay"><h3>Academy</h3><p>Professional Training</p></div></div>
+        <div class="service-card reveal"><img src="https://images.unsplash.com/photo-1522337094846-8a818192de1f?w=800"><div class="service-txt-overlay"><h3>Keratin Therapy</h3><p>Silky Smooth</p></div></div>
+        <div class="service-card reveal"><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=800"><div class="service-txt-overlay"><h3>Skin Care</h3><p>Advanced Glow</p></div></div>
+        <div class="service-card reveal"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800"><div class="service-txt-overlay"><h3>Bridal Artistry</h3><p>Timeless Beauty</p></div></div>
     </div>
 </section>
 
 <section id="location">
     <div class="map-container reveal">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.444747712345!2d76.56123456789012!3d18.39876543210987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc5cf6cd1c1733f%3A0x4181ced7e73ccde1!2sHABIBH%20UNISEX%20SALON%20%26%20ACADEMY!5e0!3m2!1sen!2sin!4v1714392000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.8211054378875!2d76.55940617596005!3d18.39103597143164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcf836cc9d5313f%3A0xc181cd79e73cec5e!2sHABIBH%20UNISEX%20SALON%20%26%20ACADEMY!5e0!3m2!1sen!2sin!4v1714392000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
     </div>
     <div class="loc-text reveal">
         <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 3.2rem; font-weight: 300;">Latur Studio</h2>
         <p>Ground Floor, Core Four Building,<br>Khardekar Stop, Ausa Road, Latur.</p>
         <div style="margin-top: 2.5rem;">
-            <a href="https://maps.app.goo.gl/PzHUyWyDzzsRXuw87" target="_blank" class="nav-btn" style="text-decoration: none; display: inline-block;">Get Directions</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=HABIBH+UNISEX+SALON+AND+ACADEMY+Latur&destination_place_id=ChIJPzHUyWyDzzsRXuw850nPgcE" target="_blank" class="nav-btn" style="text-decoration: none; display: inline-block;">Get Directions</a>
         </div>
     </div>
 </section>
@@ -202,27 +149,25 @@
     <div class="atm-overlay"></div>
     <div class="contact-inner reveal">
         <h2 class="section-h2">Reserve Your <em>Appointment</em></h2>
-        <p style="opacity: 0.7; margin-bottom: 3rem;">We will redirect you to WhatsApp to finalize your booking.</p>
         <form class="contact-form" id="bookingForm">
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-                <div class="field"><label>First Name</label><input type="text" id="fname" placeholder="First Name" required></div>
-                <div class="field"><label>Last Name</label><input type="text" id="lname" placeholder="Last Name" required></div>
+                <div class="field"><label>First Name</label><input type="text" id="fname" required></div>
+                <div class="field"><label>Last Name</label><input type="text" id="lname" required></div>
             </div>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem;">
-                <div class="field"><label>Phone</label><input type="tel" id="phone" placeholder="+91" required></div>
+                <div class="field"><label>Phone</label><input type="tel" id="phone" required></div>
                 <div class="field">
-                    <label>Interested In</label>
+                    <label>Treatment</label>
                     <select id="service" required>
                         <option value="">— Select —</option>
                         <option>Hair Styling</option>
                         <option>Hair Color</option>
                         <option>Skin Treatment</option>
                         <option>Academy Inquiry</option>
-                        <option>Bridal Artistry</option>
                     </select>
                 </div>
             </div>
-            <button type="submit" class="form-submit">Book via WhatsApp</button>
+            <button type="submit" class="form-submit">Confirm via WhatsApp</button>
         </form>
     </div>
 </section>
